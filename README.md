@@ -6,7 +6,7 @@ Los pasos son los siguientes:
 
 ## 1. Creación de tabla Caller ID y store procedure de consulta
 
-En la BD de Negocio, se deberá crear la tabla Caller ID que contendrá el listado de Caller IDs a usar, así como el store procedure que se consultará desde la PBX para obtener un Caller ID aleatorio de la lista. Para esto, se deben ejecutar las querys del archivo **/querys.sql**
+En la BD de Negocio, se deberá crear la tabla Caller ID que contendrá el listado de Caller IDs a usar, así como el store procedure que se consultará desde la PBX para obtener un Caller ID aleatorio de la lista. Para esto, se deben ejecutar las querys del archivo **querys.sql**
 
 ## 2. Validación de la existencia de ODBC en la PBX
 
