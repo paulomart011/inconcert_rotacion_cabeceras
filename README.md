@@ -38,7 +38,7 @@ Por ejemplo, esta campaña tiene una configuración de rotación de cabeceras en
 
 ![Imagen de referencia](assets/dialplan_odbc.PNG)
 
-##4. Creación de formulario de mantenimiento
+## 4. Creación de formulario de mantenimiento
 
 Se debe subir a OCC el formulario genérico llamado **FormMantenimientoCabeceras.bundle**
 
