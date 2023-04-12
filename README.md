@@ -25,6 +25,7 @@ En caso no existan estos archivos o la configuración no sea la deseada, se debe
 El siguiente paso es agregar la consulta a la BD desde el archivo /etc/asterisk/extensions.conf de la PBX, para ello se tiene que usar ODBCquery para poder ejecutar el store procedure desde la PBX:
 
 exten => _393-51-X.,n,ODBCqueryIC(temp=BlendingPMartinez.dbo.ObtenerCallerIDNuevatel)
+
 exten => _393-51-X.,n,Set(CALLERID(num)=${temp})
 
 Recordar que una vez realizados los cambios se debe recargar el dialplan:
