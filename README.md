@@ -10,7 +10,7 @@ En la BD de Negocio, se deberá crear la tabla Caller ID que contendrá el lista
 
 ## 2. Validación de la existencia de ODBC en la PBX
 
-Se debe validar si es que la PBX donde se usará el proceso tiene instalado ODBC, el cual permite ejecutar store procedures desde Asterisk. Se deben ejecutar los siguientes comandos y verificar que la IP corresponde al servidor de la base de datos del punto 1 (la base que usa por defecto es MMProdat, la tabla y sp del punto no necesariamente debe estar en la MMProdat puede estar en otra BD del mismo servidor):
+Se debe validar si es que la PBX donde se usará el proceso tiene instalado ODBC, el cual permite ejecutar store procedures desde Asterisk. Se deben ejecutar los siguientes comandos y verificar que la IP corresponde al servidor de la base de datos del punto 1 (la base que usa por defecto es MMProdat, la tabla y sp del punto 1 no necesariamente deben estar en la MMProdat, puede estar en otra BD del mismo servidor):
  
 ```
 nano /usr/local/etc/odbc.ini
