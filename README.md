@@ -22,11 +22,11 @@ En caso no existan estos archivos o la configuración no sea la deseada, se debe
 
 ## 3. Adición de obtención de Caller ID en el archivo extensions.conf de la PBX
 
-El siguiente paso es agregar la consulta a la BD desde el archivo /etc/asterisk/extensions.conf de la PBX, para ello se tiene que usar ODBCquery para poder ejecutar el store procedure desde la PBX:
+El siguiente paso es agregar la consulta a la BD desde el archivo **/etc/asterisk/extensions.conf** de la PBX, para ello se tiene que usar ODBCquery para poder ejecutar el store procedure desde la PBX:
 
-exten => _393-51-X.,n,ODBCqueryIC(temp=BlendingPMartinez.dbo.ObtenerCallerIDNuevatel)
+**exten => _393-51-X.,n,ODBCqueryIC(temp=BlendingPMartinez.dbo.ObtenerCallerIDNuevatel)**
 
-exten => _393-51-X.,n,Set(CALLERID(num)=${temp})
+**exten => _393-51-X.,n,Set(CALLERID(num)=${temp})**
 
 Recordar que una vez realizados los cambios se debe recargar el dialplan:
  
@@ -36,7 +36,7 @@ asterisk -rx 'extensions reload'
 
 Por ejemplo, esta campaña tiene una configuración de rotación de cabeceras en su dialplan:
 
-![Imagen de referencia](assets/dialplan_odbc.png)
+![Imagen de referencia](assets/dialplan_odbc.PNG)
 
 ##4. Creación de formulario de mantenimiento
 
@@ -44,6 +44,6 @@ Se debe subir a OCC el formulario genérico llamado **FormMantenimientoCabeceras
 
 Recordar que se debe actualizar la fuente de datos CallerID con las credenciales que corresponda.
 
-Finalmente se debe habilitar el formulario genérico en el Iniciador de Aplicaciones de OCC para que el cliente pueda acceder fácilmente.
+Finalmente se debe habilitar el formulario genérico en el **Iniciador de Aplicaciones** de OCC para que el cliente pueda acceder fácilmente.
 
 
