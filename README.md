@@ -4,11 +4,11 @@ El proceso de rotación de cabeceras consiste en definir un listado de Caller ID
 
 Los pasos son los siguientes:
 
-##1. Creación de tabla Caller ID y store procedure de consulta
+## 1. Creación de tabla Caller ID y store procedure de consulta
 
 En la BD de Negocio, se deberá crear la tabla Caller ID que contendrá el listado de Caller IDs a usar, así como el store procedure que se consultará desde la PBX para obtener un Caller ID aleatorio de la lista. Para esto, se deben ejecutar las querys del archivo **/querys.sql**
 
-##2. Validación de la existencia de ODBC en la PBX
+## 2. Validación de la existencia de ODBC en la PBX
 
 Se debe validar si es que la PBX donde se usará el proceso tienen instalado ODBC, el cual permite ejecutar store procedures desde Asterisk. Para esto se deben ejecutar los siguientes comandos y verificar que la IP y credenciales que aparecen en los archivos corresponden a la base de datos donde se encuentra la tabla y store procedure creados en el paso 1:
  
@@ -20,7 +20,7 @@ En caso no existan estos archivos o la configuración no sea la deseada, se debe
 
 [https://inconcert.atlassian.net/wiki/spaces/allegroDocs/pages/6651926/C+mo+ejecutar+un+Stored+Procedure+desde+el+dialplan+de+Asterisk]
 
-##3. Adición de obtención de Caller ID en el archivo extensions.conf de la PBX
+## 3. Adición de obtención de Caller ID en el archivo extensions.conf de la PBX
 
 El siguiente paso es agregar la consulta a la BD desde el archivo /etc/asterisk/extensions.conf de la PBX, para ello se tiene que usar ODBCquery para poder ejecutar el store procedure desde la PBX:
 
