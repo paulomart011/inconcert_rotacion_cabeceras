@@ -36,7 +36,7 @@ asterisk -rx 'extensions reload'
 
 Por ejemplo, esta campaña tiene una configuración de rotación de cabeceras en su dialplan:
 
-![Imagen de referencia](assets/dialplan_odbc.PNG)
+![Imagen de referencia](assets/dialplan_odbc.png)
 
 ## 4. Creación de formulario de mantenimiento
 
